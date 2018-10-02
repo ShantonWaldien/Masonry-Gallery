@@ -1,0 +1,243 @@
+/*
+  These are some base styles so that our tutorial looks good.
+  Let's go through the important bits real quick
+*/
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+  }
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+  
+  /*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: black;
+    background-size:  auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    background-attachment: fixed;
+    letter-spacing: -1px;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 5px 0;
+  }
+  /* Each item in our grid will contain numbers */
+  .item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03); */
+    font-size: 35px;
+    background-color: white;
+  }
+  
+  .item p {
+    margin: 0 0 5px 0;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-gap: 5px;
+      margin: 0;        
+  }
+  
+  .container div {
+      background-size: cover;
+  }
+
+
+  .container img {
+      width: 100%; 
+      vertical-align: center;
+      
+  }
+      
+    .jp {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }  
+
+    .ashton {
+        background-image: url(../img/ashton.jpg) ;
+        background-size: cover;
+        grid-column-start: 3;
+        background-position-x: 80%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    } 
+    
+    .gcobisa{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+     .shanton {
+        background-image: url(../img/shanton.jpg) ;
+        background-size: cover;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+       
+    } 
+
+    .kaylem {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .evan {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .daniel {
+        background-image: url(../img/daniel.jpg) ;
+        background-position-y: 40%;
+        background-position-x: 50%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+
+    }
+
+    .shakeel {
+        background-image: url(../img/shakeel.jpg) ;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-position-y: 20%;
+        background-position-x: 40%;
+        
+    }
+
+    .josh {
+        background-image: url(../img/josh.png) ;
+        background-position-x: 30%;
+    }
+
+    .jessie {
+        background-image: url(../img/jessie.jpeg) ;
+        background-position-x: 30%;
+    }
+
+    .litha {
+        background-image: url(../img/litha.jpg) ;
+        background-position-y:  90%;
+        background-position-x: 50%;
+
+    }
+
+    .michael {
+        background-image: url(../img/michael.jpeg) ;
+        grid-column-start: 4;
+        grid-row-start: 5;
+        grid-row-end: 8;
+        background-size: cover;
+        background-position-x: 30%;
+    }
+
+    .miguel {
+        background-image: url(../img/miguel.jpg) ;
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: 8;
+        background-size: cover;
+        background-position-x: 30% ;
+    }
+
+    .kaylem {
+        background-image: url(../img/kaylem.jpg);
+        background-size: cover;
+        grid-column-start: 3;
+
+    }
+
+    .reagan {
+        background-image: url(../img/reagan.JPG);
+        background-size: cover;
+        background-position-x: 50%;
+    }
+
+    .zainab {
+        background-image: url(../img/zainab.jpg) ;
+        background-size: cover;
+        grid-column-start: 2;
+        grid-row-start: 8;
+        grid-row-end: 10;
+        background-position-x: 80%;
+    }
+
+    .taariq {
+        background-image: url(../img/taariq.jpg) ;
+        background-size: cover;
+        grid-column-start: 4;
+        grid-row-start: 8;
+        grid-row-end: 10;
+        background-position-x: 80%;
+    }
+
+    .warnita {
+        background-image: url(../img/warnita.jpg);
+        background-size: cover;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .marlon {
+        background-image: url(../img/marlon.jpg);
+        background-size: cover;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .tyrone {
+        background-image: url(../img/tyrone.jpg) ;
+        background-position-x: 50%;
+    }
+
+    div:hover {
+        transform: scale(1.1) ;
+        transition: all .6s;
+    }
+
+    
+
+
+
+    
+
+    
+  
+
+  
